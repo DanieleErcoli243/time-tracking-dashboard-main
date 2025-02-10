@@ -50,4 +50,5 @@ h4 {
 
 .owner-card {
     background-color: var(--owner-card);
+    border-radius: var(--border-radius);
 }
