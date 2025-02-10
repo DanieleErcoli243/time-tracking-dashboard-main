@@ -39,3 +39,15 @@ h3,
 h4 {
     color: var(--color);
 }
+
+/* container */
+
+.container {
+    padding: 80px 20px;
+}
+
+/* card del proprietario */
+
+.owner-card {
+    background-color: var(--owner-card);
+}
