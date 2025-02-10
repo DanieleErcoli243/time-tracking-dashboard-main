@@ -43,11 +43,7 @@ h4 {
     font-weight: normal;
 }
 
-.owner-card,
-.card {
-    margin-bottom: var(--margin-bottom);
-    background-color: var(--card-body);
-}
+
 
 .active {
     color: var(--color);
@@ -63,6 +59,8 @@ h4 {
 
 .owner-card {
     border-radius: var(--border-radius);
+    background-color: var(--card-body);
+    margin-bottom: var(--margin-bottom);
     
     .info {
         padding: var(--card-padding);
@@ -93,15 +91,47 @@ h4 {
     }
 
 
+    /* sezione coi link */
+
     .timeframes {
         padding: var(--card-padding);
         
     }
+
+    /* lista dei link */
 
     ul {
         list-style-type: none;
         color: var(--lighter-color);
         display: flex;
         justify-content: space-between;
+    }
+}
+
+/* card */
+
+.card {
+    border-radius: var(--border-radius);
+    background-color: var(--header-work);
+    
+    .card-header {
+        height: 40px;
+        background-image: url(../images/icon-work.svg);
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+    
+    .card-body {
+        border-radius: var(--border-radius);
+        padding: var(--card-padding);
+        background-color: var(--card-body);
+    }
+    
+    .category-icon,
+    .data-prev {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
     }
 }
