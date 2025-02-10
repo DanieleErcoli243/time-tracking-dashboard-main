@@ -3,6 +3,10 @@
 :root {
     --body-background: hsl(226, 43%, 10%);
     --card-body: hsl(235, 46%, 20%);
+    --owner-card: hsl(246, 80%, 60%);
+    --color: white;
+    --light-color: hsl(235, 45%, 61%);
+    --lighter-color: hsl(236, 100%, 87%);
     --header-work: hsl(15, 100%, 70%);
     --header-play: hsl(195, 74%, 62%);
     --header-study: hsl(348, 100%, 68%);
@@ -23,7 +27,15 @@
     font-family: 'Rubik', serif;
 }
 
+/* generici */
 
 body {
     background-color: var(--body-background);
+}
+
+h1, 
+h2,
+h3,
+h4 {
+    color: var(--color);
 }
