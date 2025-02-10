@@ -1,3 +1,20 @@
+/* root properties */
+
+:root {
+    --body-background: hsl(226, 43%, 10%);
+    --card-body: hsl(235, 46%, 20%);
+    --header-work: hsl(15, 100%, 70%);
+    --header-play: hsl(195, 74%, 62%);
+    --header-study: hsl(348, 100%, 68%);
+    --header-exercise: hsl(145, 58%, 55%);
+    --header-social: hsl(264, 64%, 52%);
+    --header-self: hsl(43, 84%, 65%);
+    --padding-col: 0 10px;
+    --margin-row: 0 -10px;
+    --border-radius: 20px;
+}
+
+
 body {
-    background-color: hsl(226, 43%, 10%);
+    background-color: var(--body-background);
 }
