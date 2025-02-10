@@ -17,6 +17,7 @@
     --margin-row: 0 -10px;
     --border-radius: 20px;
     --margin-bottom: 20px;
+    --card-padding: 30px;
 }
 
 /* css reset */
@@ -64,7 +65,7 @@ h4 {
     border-radius: var(--border-radius);
     
     .info {
-        padding: 30px;
+        padding: var(--card-padding);
         background-color: var(--owner-card);
         border-radius: var(--border-radius);
 
@@ -93,7 +94,7 @@ h4 {
 
 
     .timeframes {
-        padding: 20px;
+        padding: var(--card-padding);
         
     }
 
