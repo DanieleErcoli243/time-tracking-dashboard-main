@@ -1,4 +1,14 @@
-
+const fetchData = () => {
+  // uso il metodo fetch per recuperare i dati dal file json
+  fetch('/data.json').then((response) => {  
+    if(!response.ok) return console.log('Oops! Something went wrong.');
+    
+    return response.json();
+  }).then((data) => {
+    data = data;
+    console.log(data);
+  });
+}
 
 // recupero gli elementi dal DOM
 
@@ -12,16 +22,8 @@ let data;
 let isCLicked = false;
 const daily = dailyBtn.innerText.toLowerCase();
 
-// uso il metodo fetch per recuperare i dati dal file json
- fetch('/data.json').then((response) => {  
-    if(!response.ok) return console.log('Oops! Something went wrong.');
-    
-    return response.json();
-  }).then((data) => {
-    data = data;
-});
 
-console.log(data);
+
 
 
 
