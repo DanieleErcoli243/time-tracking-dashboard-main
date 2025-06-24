@@ -44,6 +44,15 @@ h4 {
 }
 
 
+button {
+    background: none;
+    border: none;
+    color: var(--light-color);
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
 
 .active {
     color: var(--color);
@@ -113,7 +122,6 @@ h4 {
 .card {
     border-radius: var(--border-radius);
     background-color: var(--header-work);
-    
     .card-header {
         height: 40px;
         background-image: url(../images/icon-work.svg);
@@ -124,7 +132,8 @@ h4 {
     .card-body {
         border-radius: var(--border-radius);
         padding: var(--card-padding);
-        background-color: var(--card-body);
+        /* background-color: var(--card-body); */
+        
     }
     
     .category-icon,
