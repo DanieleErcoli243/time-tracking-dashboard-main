@@ -25,6 +25,7 @@ fetch('/data.json').then((response) => {
 dailyBtn.addEventListener('click', () => {
   weeklyBtn.classList.remove('active');
   dailyBtn.classList.add('active');
+  monthlyBtn.classList.remove('active');
   // faccio un ciclo su data per stampare le card dinamicamente
   
   jsonData.forEach(d => {
@@ -39,7 +40,7 @@ dailyBtn.addEventListener('click', () => {
               </div>
               <div class="data-prev">
                 <h2>${d.timeframes.daily.current}hrs</h2>
-                <h4>Last Week - <span>${d.timeframes.daily.prev}hrs</span></h4>
+                <h4>Last Week - <span>${d.timeframes.daily.previous}hrs</span></h4>
               </div>
               </div>
           </div>`;
@@ -47,10 +48,12 @@ dailyBtn.addEventListener('click', () => {
   }
   
   );
-})
+});
+
 weeklyBtn.addEventListener('click', () => {
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.add('active');
+  monthlyBtn.classList.remove('active');
     // faccio un ciclo su data per stampare le card dinamicamente
     
     jsonData.forEach(d => {
@@ -64,7 +67,35 @@ weeklyBtn.addEventListener('click', () => {
                 </div>
                 <div class="data-prev">
                   <h2>${d.timeframes.weekly.current}hrs</h2>
-                  <h4>Last Week - <span>${d.timeframes.weekly.prev}hrs</span></h4>
+                  <h4>Last Week - <span>${d.timeframes.weekly.previous}hrs</span></h4>
+                </div>
+                </div>
+            </div>`;
+        row.innerHTML= card;
+    }
+    
+    );
+});
+
+monthlyBtn.addEventListener('click', () => {
+  dailyBtn.classList.remove('active');
+  weeklyBtn.classList.remove('active');
+  monthlyBtn.classList.add('active');
+  
+    // faccio un ciclo su data per stampare le card dinamicamente
+    
+    jsonData.forEach(d => {
+        
+        const card = `<div class="card">
+              <div class="card-header"></div>
+              <div class="card-body">
+                <div class="category-icon">
+                  <h3>${d.title}</h3>
+                  <img src="images/icon-ellipsis.svg" alt="immagine dei tre puntini">
+                </div>
+                <div class="data-prev">
+                  <h2>${d.timeframes.monthly.current}hrs</h2>
+                  <h4>Last Week - <span>${d.timeframes.monthly.previous}hrs</span></h4>
                 </div>
                 </div>
             </div>`;
