@@ -11,26 +11,24 @@ let jsonData;
 let isCLicked = false;
 const daily = dailyBtn.innerText.toLowerCase();
 
-const fetchPromise = fetch(
-  '/data.json'
-);
-
-fetchPromise.then((response) => {
-  jsonData = response.json();
-  jsonData.then(data);
-  console.log(jsonData);
-})
-
+fetch('/data.json').then((response) => {  
+  if(!response.ok) return console.log('Oops! Something went wrong.');
+  
+  return response.json();
+}).then((data) => {
+  jsonData = data;
+});
 
 
 // aggancio un ascoltatore di eventi al bottone per mostrare le card
 
 dailyBtn.addEventListener('click', () => {
   weeklyBtn.classList.remove('active');
-dailyBtn.classList.add('active');
+  dailyBtn.classList.add('active');
   // faccio un ciclo su data per stampare le card dinamicamente
   
   jsonData.forEach(d => {
+    console.log(jsonData);
       
       const card = `<div class="card">
             <div class="card-header"></div>
@@ -45,7 +43,7 @@ dailyBtn.classList.add('active');
               </div>
               </div>
           </div>`;
-      row.innerHTML= card;
+      row.innerHTML = card;
   }
   
   );
