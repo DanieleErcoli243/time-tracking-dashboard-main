@@ -73,7 +73,7 @@ weeklyBtn.addEventListener('click', () => {
                 </div>
                 </div>
             </div>`;
-        row.innerHTML= cards;
+        row.innerHTML = cards;
     }
     
     );
@@ -101,7 +101,7 @@ monthlyBtn.addEventListener('click', () => {
                 </div>
                 </div>
             </div>`;
-        row.innerHTML= cards;
+        row.innerHTML = cards;
     }
     
     );
