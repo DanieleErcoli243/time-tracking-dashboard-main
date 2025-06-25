@@ -133,6 +133,8 @@ button {
         border-radius: var(--border-radius);
         padding: var(--card-padding);
         background-color: var(--card-body);
+        transform: translate(0, 2%);
+
         
     }
     

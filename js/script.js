@@ -9,8 +9,10 @@ let jsonData;
 // creo una variabile d'apoggio
 
 let isCLicked = false;
+let cards = ``;
 const daily = dailyBtn.innerText.toLowerCase();
 
+// uso fetch per richiamare i dati
 fetch('/data.json').then((response) => {  
   if(!response.ok) return console.log('Oops! Something went wrong.');
   
@@ -28,8 +30,8 @@ dailyBtn.addEventListener('click', () => {
   monthlyBtn.classList.remove('active');
   // faccio un ciclo su data per stampare le card dinamicamente
   
+  console.log(jsonData);
   jsonData.forEach(d => {
-    console.log(jsonData);
       
       const card = `<div class="card">
             <div class="card-header"></div>
@@ -58,7 +60,7 @@ weeklyBtn.addEventListener('click', () => {
     
     jsonData.forEach(d => {
         
-        const card = `<div class="card">
+        cards += `<div class="card">
               <div class="card-header"></div>
               <div class="card-body">
                 <div class="category-icon">
