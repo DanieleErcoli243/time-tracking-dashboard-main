@@ -33,7 +33,8 @@ dailyBtn.addEventListener('click', () => {
   console.log(jsonData);
   jsonData.forEach(d => {
       
-       cards = `<div class="card">
+       cards = `<div class="col">
+       <div class="card">
             <div class="card-header"></div>
             <div class="card-body">
               <div class="category-icon">
@@ -45,6 +46,7 @@ dailyBtn.addEventListener('click', () => {
                 <h4>Last Week - <span>${d.timeframes.daily.previous}hrs</span></h4>
               </div>
               </div>
+          </div>
           </div>`;
       row.innerHTML = cards;
   }
@@ -60,7 +62,8 @@ weeklyBtn.addEventListener('click', () => {
     
     jsonData.forEach(d => {
         
-        cards += `<div class="card">
+        cards += `<div class="col">
+        <div class="card">
               <div class="card-header"></div>
               <div class="card-body">
                 <div class="category-icon">
@@ -72,6 +75,7 @@ weeklyBtn.addEventListener('click', () => {
                   <h4>Last Week - <span>${d.timeframes.weekly.previous}hrs</span></h4>
                 </div>
                 </div>
+            </div>
             </div>`;
         row.innerHTML = cards;
     }
