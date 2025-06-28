@@ -89,7 +89,7 @@ monthlyBtn.addEventListener('click', () => {
     jsonData.forEach(d => {
         
         cards = `<div class="card">
-              <div class="card-header"></div>
+              <div class="card-header ${d.title}"></div>
               <div class="card-body">
                 <div class="category-icon">
                   <h3>${d.title}</h3>
