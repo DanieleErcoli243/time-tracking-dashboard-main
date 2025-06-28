@@ -84,23 +84,26 @@ monthlyBtn.addEventListener('click', () => {
   weeklyBtn.classList.remove('active');
   monthlyBtn.classList.add('active');
   
+  
     // faccio un ciclo su data per stampare le card dinamicamente
     
     jsonData.forEach(d => {
         
-        cards = `<div class="card">
-              <div class="card-header ${d.title}"></div>
-              <div class="card-body">
-                <div class="category-icon">
-                  <h3>${d.title}</h3>
-                  <img src="images/icon-ellipsis.svg" alt="immagine dei tre puntini">
-                </div>
-                <div class="data-prev">
-                  <h2>${d.timeframes.monthly.current}hrs</h2>
-                  <h4>Last Week - <span>${d.timeframes.monthly.previous}hrs</span></h4>
-                </div>
-                </div>
-            </div>`;
+        cards = `<div class="col">
+                  <div class="card">
+                    <div class="card-header"></div>
+                    <div class="card-body">
+                      <div class="category-icon">
+                        <h3>${d.title}</h3>
+                        <img src="images/icon-ellipsis.svg" alt="immagine dei tre puntini">
+                      </div>
+                      <div class="data-prev">
+                        <h2>${d.timeframes.monthly.current}hrs</h2>
+                        <h4>Last Week - <span>${d.timeframes.monthly.previous}hrs</span></h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>`;
         row.innerHTML = cards;
     }
     
