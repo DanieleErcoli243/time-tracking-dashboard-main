@@ -58,6 +58,36 @@ button {
     color: var(--color);
 }
 
+
+/* utili */
+
+.work {
+    background-image: url(../images/icon-work.svg);
+}
+
+.exercise {
+    background-image: url(../images/icon-exercise.svg);
+    
+}
+
+.play {
+    background-image: url(../images/icon-play.svg);
+}
+
+.self-care {
+    background-image: url(../images/icon-self-care.svg);
+    
+}
+
+.social {
+    background-image: url(../images/icon-social.svg);
+    
+}
+
+.study {
+    background-image: url(../images/icon-study.svg);
+
+}
 /* container */
 
 .container {
@@ -124,7 +154,7 @@ button {
     background-color: var(--header-work);
     .card-header {
         height: 40px;
-        background-image: url(../images/icon-work.svg);
+        
         background-position: top right;
         background-repeat: no-repeat;
     }
