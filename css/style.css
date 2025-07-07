@@ -213,11 +213,60 @@ button {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 0;
-        margin: 0 -10px;
+        margin: var(--margin-row);
     }
 
     .col {
         flex-basis: 50%;
+        padding: var(--padding-col);
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 950px;
+        margin: 0 auto;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .owner-card {
+        flex-basis: 20%;
+        .info {
+            figure {
+                display: block;
+            }
+
+            h1 {
+                font-size: 27px;
+            }
+            
+            .button-list {
+                display: block;
+            }
+
+            
+        }
+    }
+
+    .row {
+        flex-grow: 1;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0;
+        margin: 0 -10px;
+    }
+
+    .col {
+        flex-basis: 33%;
         padding: 0 10px;
     }
 
