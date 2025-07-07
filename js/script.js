@@ -28,6 +28,7 @@ dailyBtn.addEventListener('click', () => {
   weeklyBtn.classList.remove('active');
   dailyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
+  row.innerHTML = '';
   // faccio un ciclo su data per stampare le card dinamicamente
   
   console.log(jsonData);
@@ -58,12 +59,13 @@ weeklyBtn.addEventListener('click', () => {
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
+  row.innerHTML = '';
     // faccio un ciclo su data per stampare le card dinamicamente
     
     jsonData.forEach(d => {
         
         cards += `<div class="col">
-        <div class="card">
+        <div class="card ${d.title === 'Self Care' ? 'self-care' : d.title.toLowerCase()}">
               <div class="card-header"></div>
               <div class="card-body">
                 <div class="category-icon">
@@ -88,7 +90,7 @@ monthlyBtn.addEventListener('click', () => {
   weeklyBtn.classList.remove('active');
   monthlyBtn.classList.add('active');
   
-  
+  row.innerHTML = '';
     // faccio un ciclo su data per stampare le card dinamicamente
     
     jsonData.forEach(d => {

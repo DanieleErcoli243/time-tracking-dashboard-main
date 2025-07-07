@@ -166,12 +166,12 @@ button {
 
 .card {
     border-radius: var(--border-radius);
-    background-color: var(--header-work);
+    
+    background-position: top right;
+    background-repeat: no-repeat;
     .card-header {
         height: 40px;
         
-        background-position: top right;
-        background-repeat: no-repeat;
     }
     
     .card-body {
