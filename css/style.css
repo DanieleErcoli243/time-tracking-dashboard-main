@@ -145,7 +145,7 @@ button {
 
     /* lista dei bottoni */
 
-    ul {
+    .button-list {
         list-style-type: none;
         color: var(--lighter-color);
         display: flex;
