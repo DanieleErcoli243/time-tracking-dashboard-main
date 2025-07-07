@@ -25,7 +25,7 @@ fetch('/data.json').then((response) => {
 // aggancio un ascoltatore di eventi al bottone per mostrare le card
 
 dailyBtn.addEventListener('click', () => {
-  row.innerHTML = '';
+  row.innerHTML = ``;
   weeklyBtn.classList.remove('active');
   dailyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
@@ -56,7 +56,7 @@ dailyBtn.addEventListener('click', () => {
 });
 
 weeklyBtn.addEventListener('click', () => {
-  row.innerHTML = '';
+  row.innerHTML = ``;
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
@@ -86,7 +86,7 @@ weeklyBtn.addEventListener('click', () => {
 });
 
 monthlyBtn.addEventListener('click', () => {
-  row.innerHTML = '';
+  row.innerHTML = ``;
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.remove('active');
   monthlyBtn.classList.add('active');
