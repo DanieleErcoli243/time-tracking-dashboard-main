@@ -240,7 +240,10 @@ button {
 
     .owner-card {
         flex-basis: 20%;
+        
         .info {
+
+           
             figure {
                 display: block;
             }
@@ -249,11 +252,14 @@ button {
                 font-size: 27px;
             }
             
-            .button-list {
-                display: block;
-            }
-
             
+            
+        }
+        .button-list {
+            display: block;
+            li {
+                margin-bottom: 10px;
+            }
         }
     }
 
