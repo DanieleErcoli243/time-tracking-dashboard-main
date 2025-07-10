@@ -25,7 +25,9 @@ fetch('/data.json').then((response) => {
 // aggancio un ascoltatore di eventi al bottone per mostrare le card
 
 dailyBtn.addEventListener('click', () => {
-  
+  // svuoto la row 
+  row.innerText = "";
+  // tolgo la classe active agli altri bottoni e la metto a quello premuto
   weeklyBtn.classList.remove('active');
   dailyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
@@ -56,7 +58,9 @@ dailyBtn.addEventListener('click', () => {
 });
 
 weeklyBtn.addEventListener('click', () => {
-  
+   // svuoto la row
+  row.innerText = "";
+  // tolgo la classe active agli altri bottoni e la metto a quello premuto
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.add('active');
   monthlyBtn.classList.remove('active');
@@ -86,7 +90,9 @@ weeklyBtn.addEventListener('click', () => {
 });
 
 monthlyBtn.addEventListener('click', () => {
-  
+  // svuoto la row
+  row.innerText = "";
+  // tolgo la classe active agli altri bottoni e la metto a quello premuto
   dailyBtn.classList.remove('active');
   weeklyBtn.classList.remove('active');
   monthlyBtn.classList.add('active');
