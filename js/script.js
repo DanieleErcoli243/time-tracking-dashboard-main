@@ -14,7 +14,7 @@ const daily = dailyBtn.innerText.toLowerCase();
 
 const btns = [];
 btns.push(dailyBtn, weeklyBtn, monthlyBtn);
-console.table(btns);
+
 
 // uso fetch per richiamare i dati
 fetch('/data.json').then((response) => {  
