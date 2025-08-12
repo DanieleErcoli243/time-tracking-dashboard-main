@@ -7,10 +7,14 @@ const monthlyBtn = document.getElementById('monthly');
 const row = document.querySelector('.row');
 let jsonData;
 // creo una variabile d'apoggio
-
-let isCLicked = false;
 let cards = ``;
 const daily = dailyBtn.innerText.toLowerCase();
+
+// metto i pulsanti in un array
+
+const btns = [];
+btns.push(dailyBtn, weeklyBtn, monthlyBtn);
+console.table(btns);
 
 // uso fetch per richiamare i dati
 fetch('/data.json').then((response) => {  
