@@ -60,8 +60,7 @@ btns.forEach(btn => {
     
     );
     } else if (btn.innerText === 'Weekly') {
-      // svuoto la row
-      row.innerHTML = "";
+      
       // tolgo la classe active agli altri bottoni e la metto a quello premuto
       dailyBtn.classList.remove('active');
       weeklyBtn.classList.add('active');
@@ -88,8 +87,7 @@ btns.forEach(btn => {
     
     );
     } else {
-      // svuoto la row
-      row.innerHTML = "";
+      
       // tolgo la classe active agli altri bottoni e la metto a quello premuto
       dailyBtn.classList.remove('active');
       weeklyBtn.classList.remove('active');
