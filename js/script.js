@@ -28,17 +28,17 @@ fetch('/data.json').then((response) => {
 
 // aggancio un ascoltatore di eventi al bottone per mostrare le card
 
-dailyBtn.addEventListener('click', () => {
-  // svuoto la row 
-  row.innerText = "";
-  // tolgo la classe active agli altri bottoni e la metto a quello premuto
-  weeklyBtn.classList.remove('active');
-  dailyBtn.classList.add('active');
-  monthlyBtn.classList.remove('active');
-  // faccio un ciclo su data per stampare le card dinamicamente
-  
-  console.log(jsonData);
-   jsonData.forEach(d => {
+btns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    // svuoto la row 
+    row.innerText = "";
+
+    if (btn.innerText === 'Daily') {
+      // tolgo la classe active agli altri bottoni e la metto a quello premuto
+      weeklyBtn.classList.remove('active');
+      monthlyBtn.classList.remove('active');
+      dailyBtn.classList.add('active');
+      jsonData.forEach(d => {
         
         cards += `<div class="col">
         <div class="card ${d.title === 'Self Care' ? 'self-care' : d.title.toLowerCase()}">
@@ -59,18 +59,14 @@ dailyBtn.addEventListener('click', () => {
     }
     
     );
-});
-
-weeklyBtn.addEventListener('click', () => {
-   // svuoto la row
-  row.innerText = "";
-  // tolgo la classe active agli altri bottoni e la metto a quello premuto
-  dailyBtn.classList.remove('active');
-  weeklyBtn.classList.add('active');
-  monthlyBtn.classList.remove('active');
-    // faccio un ciclo su data per stampare le card dinamicamente
-    
-    jsonData.forEach(d => {
+    } else if (btn.innerText === 'Weekly') {
+      // svuoto la row
+      row.innerText = "";
+      // tolgo la classe active agli altri bottoni e la metto a quello premuto
+      dailyBtn.classList.remove('active');
+      weeklyBtn.classList.add('active');
+      monthlyBtn.classList.remove('active');
+      jsonData.forEach(d => {
         
         cards += `<div class="col">
         <div class="card ${d.title === 'Self Care' ? 'self-care' : d.title.toLowerCase()}">
@@ -91,39 +87,40 @@ weeklyBtn.addEventListener('click', () => {
     }
     
     );
-});
-
-monthlyBtn.addEventListener('click', () => {
-  // svuoto la row
-  row.innerText = "";
-  // tolgo la classe active agli altri bottoni e la metto a quello premuto
-  dailyBtn.classList.remove('active');
-  weeklyBtn.classList.remove('active');
-  monthlyBtn.classList.add('active');
-  
-    // faccio un ciclo su data per stampare le card dinamicamente
-    
-   jsonData.forEach(d => {
+    } else {
+      // svuoto la row
+      row.innerText = "";
+      // tolgo la classe active agli altri bottoni e la metto a quello premuto
+      dailyBtn.classList.remove('active');
+      weeklyBtn.classList.remove('active');
+      monthlyBtn.classList.add('active');
+      
+        // faccio un ciclo su data per stampare le card dinamicamente
         
-        cards += `<div class="col">
-        <div class="card ${d.title === 'Self Care' ? 'self-care' : d.title.toLowerCase()}">
-              <div class="card-header"></div>
-              <div class="card-body">
-                <div class="category-icon">
-                  <h3>${d.title}</h3>
-                  <img src="images/icon-ellipsis.svg" alt="immagine dei tre puntini">
+      jsonData.forEach(d => {
+            
+            cards += `<div class="col">
+            <div class="card ${d.title === 'Self Care' ? 'self-care' : d.title.toLowerCase()}">
+                  <div class="card-header"></div>
+                  <div class="card-body">
+                    <div class="category-icon">
+                      <h3>${d.title}</h3>
+                      <img src="images/icon-ellipsis.svg" alt="immagine dei tre puntini">
+                    </div>
+                    <div class="data-prev">
+                      <h2>${d.timeframes.monthly.current}hrs</h2>
+                      <h4>Last Week - <span>${d.timeframes.monthly.previous}hrs</span></h4>
+                    </div>
+                    </div>
                 </div>
-                <div class="data-prev">
-                  <h2>${d.timeframes.monthly.current}hrs</h2>
-                  <h4>Last Week - <span>${d.timeframes.monthly.previous}hrs</span></h4>
-                </div>
-                </div>
-            </div>
-            </div>`;
-        row.innerHTML = cards;
+                </div>`;
+            row.innerHTML = cards;
     }
     
     );
-})
+    }
 
+
+  })
+})
 
