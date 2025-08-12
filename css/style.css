@@ -241,13 +241,16 @@ button {
     }
 
     .owner-card {
-        flex-basis: 20%;
-        
+        flex-basis: 40%;
         .info {
+            padding: 20px 90px 100px 30px;
 
            
             figure {
                 display: block;
+                figcaption {
+                    margin-top: 20px;
+                }
             }
 
             h1 {
@@ -280,6 +283,20 @@ button {
 
     .card {
         margin-bottom: 20px;
+
+        .data-prev {
+            display: block;
+
+            h2 {
+                font-size: 32px;
+            }
+            
+            h4 {
+                margin-top: 10px;
+                color: var(--light-color);
+
+            }
+        }
     }
     
 }
